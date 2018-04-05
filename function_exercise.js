@@ -9,7 +9,8 @@
 	let overtimeHours = hoursWorked - workWeek;
 		if (overtimeHours > 0) {
 			let overtimePay = overtimeHours * (hourRate * overtimeFactor);
-			console.log("Your weekly pay is: $" + parseInt(overtimePay) + parseInt(weeklyPay) + ".");
+			let jjj = parseInt(overtimePay) + parseInt(weeklyPay);
+			console.log("Your weekly pay is: $" + jjj + ".");
 		}
 		else {
 			console.log("Your weekly pay amount is: $" + weeklyPay + ".");
@@ -17,7 +18,8 @@
 	
 }
 
-calculatePay();*/
+calculatePay();
+*/
 
 
 let userHours = prompt("Please enter the hours you worked this week: ");
@@ -43,3 +45,4 @@ function calculatePay(hours, rate) {
 				console.log("Your pay this week is: $" + weeklyRate + ".");
 			}
 }
+*/
