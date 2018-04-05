@@ -26,15 +26,18 @@ let userRate = prompt("Please enter your hourly rate: ");
 calculatePay(userHours, userRate);
 
 function calculatePay(hours, rate) {
-
-			if (hours<=40) {
+	
+		let workWeek = 40;
+		let overtimeFactor = 1.5;
+		
+			if (hours<=workWeek) {
 				let weeklyRate = hours * rate;
 				console.log("Your pay this week is: $" + weeklyRate + ".");
 			}
 			
 			else {
-				let overtimeHours = hours-40;
-				let overtimeRate = rate * 1.5;
+				let overtimeHours = hours - workWeek;
+				let overtimeRate = rate * overtimeFactor;
 				let overtimePay = overtimeHours * overtimeRate;
 				let weeklyRate = overtimePay + (hours * rate);
 				console.log("Your pay this week is: $" + weeklyRate + ".");
